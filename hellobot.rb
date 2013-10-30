@@ -12,7 +12,8 @@ irc_server = TCPSocket.open(server, port)
 irc_server.puts "USER bhellobot 0 * BHelloBot"
 irc_server.puts "NICK #{nick}"
 irc_server.puts "JOIN #{channel}"
-irc_server.puts "PRIVMSG #{channel} :Holla if ya hear me!"
+
+
 
 # Hello, Bot!
 until irc_server.eof? do
@@ -25,10 +26,13 @@ until irc_server.eof? do
   # end
 
   if msg.include?("hit em up")
-          response = "Grab your glocks when you see 2Pac!"
-          irc_server.puts "PRIVMSG #{channel} :#{response}"
+    response = "Grab your glocks when you see 2Pac!"      
+    irc_server.puts "PRIVMSG #{channel} :#{response}"
   elsif msg.include?("biggie")
-          response = "* Shoots Biggie *"
-          irc_server.puts "PRIVMSG #{channel} :#{response}"
+    response = "* Shoots Biggie *"
+    irc_server.puts "PRIVMSG #{channel} :#{response}"
+  elsif msg.include?("?")
+    response = "  Act like you know, sucka!"
+    irc_server.puts "PRIVMSG #{channel} : #{response}"         
   end
 end
