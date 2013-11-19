@@ -1,0 +1,25 @@
+<%= form_for(@restaurant) do |f| %>
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :address %><br>
+  <%= f.text_field :address %>
+</div>
+<div class="field">
+  <%= f.label :neighbourhood %><br>
+  <%= f.select :neighbourhood, %w(Downtown SouthEnd NorthEnd WestEnd) %>
+</div>
+<div lcass="field">
+  <%= f.label :category %><br>
+  <%= f.select :category_id, Category.all.collect {|c| [c.name, c.id]} %>
+</div>
+<div class="field">
+  <%= f.label :price, "Price Range" %><br>
+  <%= f.select :price, %w($ $$ $$$ $$$$ $$$$$) %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>

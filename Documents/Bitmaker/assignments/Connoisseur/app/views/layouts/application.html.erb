@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Connoisseur</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="logo">
+        <h2><%= link_to "LIQUOR DRINKS", root_path %></h2>
+      </div>
+    </div>
+    <div id="blocks_container">
+      <div id="specials">
+        <div id="specials_text">
+          <h3><%= link_to "GOOD LIQUOR DEALS!", products_path %></h3>
+        </div>
+      </div>
+      
+      <div id="get_loaded">
+        <div id="get_loaded_text">
+          <h3>GET EXTRA LOADED!</h3>
+        </div>
+      </div>
+      
+      <div id="store">
+        <div id="store_text">
+          <h3>WHERE'S THE LIQUOR?!</h3>
+        </div>
+      </div>
+    </div>        
+<%= yield %>
+
+  </div>
+</body>
+</html>

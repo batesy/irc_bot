@@ -1,0 +1,9 @@
+<h1><%= @user.name %></h1>
+<h2>Current Reservations</h2>
+<% @user.reservations.each do |r| %>
+<%= r.restaurant.name %><br>
+<% end %>
+<h2>Loyalty Points</h2>
+<%= @user.reservations.count %> POINTS!!!!!!!!!<br>
+
+<%= link_to "Back to Restaurants", restaurants_url %>
