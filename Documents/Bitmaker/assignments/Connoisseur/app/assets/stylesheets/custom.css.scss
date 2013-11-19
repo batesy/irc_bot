@@ -1,0 +1,68 @@
+#container{
+  width: 960px;
+  background: lightyellow;
+  margin: auto;
+  padding-top: 100px;
+}
+
+#header{
+  width: 100%;
+  height: 100px;
+  background: orange;
+}
+
+#logo{
+  width: 600px;
+  margin: auto;
+  text-align: center;
+  padding-top: 12px;
+}
+
+#blocks_container{
+  width: 100%;
+  height: 200px;
+  background: lightblue;
+  margin: auto;
+}
+
+#specials{
+  width: 290px;
+  height: 180px;
+  background: aqua;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22.5px;
+}
+
+#specials_text{
+  text-align: center;
+  padding-top: 55px;
+}
+
+#get_loaded{
+  width: 290px;
+  height: 180px;
+  background: lightgreen;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22.5px;
+}
+
+#get_loaded_text{
+  text-align: center;
+  padding-top: 55px;
+}
+
+#store{
+  width: 290px;
+  height: 180px;
+  background: red;
+  float: left;
+  margin-top: 10px;
+  margin-left: 22.5px;
+}
+
+#store_text{
+  text-align: center;
+  padding-top: 55px;
+}

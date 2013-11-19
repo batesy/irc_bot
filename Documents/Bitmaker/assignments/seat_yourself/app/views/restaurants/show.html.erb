@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.address %></h2>
+<p><%= @restaurant.neighbourhood %> | <%= @restaurant.category.name %> | <%= @restaurant.price %></p>
+<h3>Make A Reservation</h3>
+
+<%= form_for @reservation do |r| %>
+<%= r.datetime_select :time, :ampm => true, :minute_step => 15 %><br>
+# of Guests: <%= r.select :guests, (2..20) %><br>
+<%= r.hidden_field(:restaurant_id, value: @restaurant.id.to_s) %>
+<%= r.submit %>
+<% end %>
+
+<%= link_to "Back To Restaurants", restaurants_path %>

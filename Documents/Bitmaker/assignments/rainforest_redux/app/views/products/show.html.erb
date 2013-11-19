@@ -1,0 +1,4 @@
+<%= link_to "Back To Products", products_path %> | <%= link_to "Edit Product", edit_product_path %> | <%= link_to "Delete Product", @product, :method => :delete %>
+<h1><%= @product.name %></h1>
+<p><%= @product.description %></p>
+<p><%= @product.price_in_cents %> </p>

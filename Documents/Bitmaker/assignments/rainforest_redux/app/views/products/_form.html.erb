@@ -1,0 +1,28 @@
+<%= form_for @product do |f| %>
+
+  <% if @product.errors.any? %>
+    <h2>OH SHIT!</h2>
+    <h3>You fucked up in <%= pluralize(@product.errors.count, "way") %>:</h3>
+    <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :price_in_cents %><br />
+    <%= f.number_field :price_in_cents %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
